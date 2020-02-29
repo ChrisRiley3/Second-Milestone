@@ -2,22 +2,23 @@ var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
+    pixelArt: true,
+    physics: {
+        defualt: 'arcade',
+        arcade: {
+            gravity: { y: 0},
+            debug: false
+        },
+    },
     scene: {
         preload: preload,
         create: create,
         update: update,
     },
-    pixelArt: true,
-    physics: {
-        defualt: 'arcade',
-        arcade: {
-            debug: false
-        },
-    },
+    
 };
 
 var game = new Phaser.Game(config);
-var player;
 
 function preload() {
     //Loads images to the canvas 
@@ -28,7 +29,7 @@ function preload() {
     this.load.image('planet3', 'assets/images/Ocean.png');
     this.load.image('planet4', 'assets/images/Terran.png');
 
-    this.load.spritesheet('ship', 'assets/spritesheets/ship.png', {frameWidth: 16, frameHeight:32});
+    this.load.spritesheet('ship', 'assets/spritesheets/ship.png', {frameWidth: 16.3, frameHeight:24});
 };
 
 function create() {
@@ -41,35 +42,34 @@ function create() {
     this.planet4 = this.add.image(config.width / 2, config.height - 100, 'planet4').setScale(1.5);
 
     //Add's spritesheet to canvas
-    player = this.add.sprite(700, 300, 'ship').setScale(1.5);
+    this.ship = this.add.sprite(700, 300, 'ship',[2]).setScale(1.5);
 
     this.anims.create({
         key: 'left',
-        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 0}),
+        frames: [ { key: 'ship', frame: 0}],
         frameRate: 10,
-        repeat: -1
+        repeat: 0
     });
-
     this.anims.create({
         key: 'right',
-        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 4}),
+        frames: [ { key: 'ship', frame: 2}],
         frameRate: 10,
-        repeat: -1
+        repeat: 0
     });
-
     this.anims.create({
         key: 'up',
-        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 2}),
+        frames: [ { key: 'ship', frame: 2}],
         frameRate: 10,
-        repeat: -1
+        repeat: 0
     });
-
     this.anims.create({
         key: 'down',
-        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 2}),
+        frames: [ { key: 'ship', frame: 2}],
         frameRate: 10,
-        repeat: -1
+        repeat: 0
     });
+
+    this.cursorKeys = this.input.keyboard.createCursorKeys();
 }
 
 function update() {
@@ -108,4 +108,19 @@ function update() {
         var randomY = Phaser.Math.Between(0, config.height);
         this.planet4.y = randomY;
     };
-};
+
+    if(this.cursorKeys.left.isDown) {
+        this.ship.x -= 4;
+        this.ship.play('left', false);
+    } else if(this.cursorKeys.right.isDown) {
+        this.ship.x += 4;
+        this.ship.play('right', false);
+    } else if(this.cursorKeys.up.isDown) {
+        this.ship.y -= 4;
+        this.ship.play('up', false);
+    } else if(this.cursorKeys.down.isDown) {
+        this.ship.y += 4;
+        this.ship.play('down', false);
+    }
+}
+
