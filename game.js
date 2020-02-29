@@ -6,10 +6,18 @@ var config = {
         preload: preload,
         create: create,
         update: update,
-    }
+    },
+    pixelArt: true,
+    physics: {
+        defualt: 'arcade',
+        arcade: {
+            debug: false
+        },
+    },
 };
 
 var game = new Phaser.Game(config);
+var player;
 
 function preload() {
     //Loads images to the canvas 
@@ -19,6 +27,8 @@ function preload() {
     this.load.image('planet2', 'assets/images/Lava.png');
     this.load.image('planet3', 'assets/images/Ocean.png');
     this.load.image('planet4', 'assets/images/Terran.png');
+
+    this.load.spritesheet('ship', 'assets/spritesheets/ship.png', {frameWidth: 16, frameHeight:32});
 };
 
 function create() {
@@ -29,15 +39,47 @@ function create() {
     this.planet2 = this.add.image(config.width / 2, config.height / 2, 'planet2').setScale(0.7);
     this.planet3 = this.add.image(config.width / 2, config.height / 2 + 100, 'planet3').setScale(0.5);
     this.planet4 = this.add.image(config.width / 2, config.height - 100, 'planet4').setScale(1.5);
-};
+
+    //Add's spritesheet to canvas
+    player = this.add.sprite(700, 300, 'ship').setScale(1.5);
+
+    this.anims.create({
+        key: 'left',
+        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 0}),
+        frameRate: 10,
+        repeat: -1
+    });
+
+    this.anims.create({
+        key: 'right',
+        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 4}),
+        frameRate: 10,
+        repeat: -1
+    });
+
+    this.anims.create({
+        key: 'up',
+        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 2}),
+        frameRate: 10,
+        repeat: -1
+    });
+
+    this.anims.create({
+        key: 'down',
+        frames: this.anims.generateFrameNumbers('ship', {start: 2, end: 2}),
+        frameRate: 10,
+        repeat: -1
+    });
+}
 
 function update() {
     //Creates a moving image effect on the background
     this.background.tilePositionX += 0.5;
 
-    this.planet.x += 1;
-    this.planet1.x += 1.5;
-    this.planet2.x += 0.8;
+    //Creates a moving image effect on planets, also resets Y position on leaving the canvas
+    this.planet.x += 1.3;
+    this.planet1.x += 1.4;
+    this.planet2.x += 1;
     this.planet3.x += 1.2;
     this.planet4.x += 1.5;
 
@@ -67,9 +109,3 @@ function update() {
         this.planet4.y = randomY;
     };
 };
-
-
-
-
-
-
