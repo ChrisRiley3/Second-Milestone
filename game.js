@@ -12,11 +12,17 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload() {
-
+    this.load.image('background', 'assets/images/background.png');
+    this.load.image('baren', 'assets/images/baren.png');
+    this.load.image('desert', 'assets/images/desert.png');
+    this.load.image('forest', 'assets/images/forest.png');
+    this.load.image('lava', 'assers/images/lava.png');
+    this.load.image('ocean', 'assets/images/ocean.png');
+    this.load.image('terran', 'assets/images/terrran.png');
 }
 
 function create() {
-
+    
 }
 
 function update() {
