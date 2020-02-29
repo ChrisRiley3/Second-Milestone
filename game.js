@@ -22,7 +22,7 @@ function preload() {
 }
 
 function create() {
-    
+    this.add.image(400, 300, 'background').setScale(2);
 }
 
 function update() {
