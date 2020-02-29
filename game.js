@@ -33,7 +33,43 @@ function create() {
 
 function update() {
     //Creates a moving image effect on the background
-    this.background.tilePositionX -= 0.5;
+    this.background.tilePositionX += 0.5;
+
+    this.planet.x += 1;
+    this.planet1.x += 1.5;
+    this.planet2.x += 0.8;
+    this.planet3.x += 1.2;
+    this.planet4.x += 1.5;
+
+    if (this.planet.x > config.width) {
+        this.planet.x = 0;
+        var randomY = Phaser.Math.Between(0, config.height);
+        this.planet.y = randomY;
+    };
+    if (this.planet1.x > config.width) {
+        this.planet1.x = 0;
+        var randomY = Phaser.Math.Between(0, config.height);
+        this.planet1.y = randomY;
+    };
+    if (this.planet2.x > config.width) {
+        this.planet2.x = 0;
+        var randomY = Phaser.Math.Between(0, config.height);
+        this.planet2.y = randomY;
+    };
+    if (this.planet3.x > config.width) {
+        this.planet3.x = 0;
+        var randomY = Phaser.Math.Between(0, config.height);
+        this.planet3.y = randomY;
+    };
+    if (this.planet4.x > config.width) {
+        this.planet4.x = 0;
+        var randomY = Phaser.Math.Between(0, config.height);
+        this.planet4.y = randomY;
+    };
 };
+
+
+
+
 
 
