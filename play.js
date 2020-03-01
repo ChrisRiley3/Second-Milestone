@@ -6,6 +6,7 @@ class play extends Phaser.Scene {
   create() {
     //Add's the background image to the game canvas 
     this.background = this.add.tileSprite(400, 300, config.width, config.height, 'background').setScale(2);
+    this.background.alpha = .4;
     //Add's the planets to the game canvas with physics
     this.planet = this.physics.add.image(400, 100, 'planet').setScale(0.9);
     this.planet1 = this.physics.add.image(400, 200, 'planet1').setScale(1.2);
@@ -13,12 +14,12 @@ class play extends Phaser.Scene {
     this.planet3 = this.physics.add.image(400, 400, 'planet3').setScale(0.5);
     this.planet4 = this.physics.add.image(400, 500, 'planet4').setScale(1.5);
     //Add's the stars to the game canvas with physics
-    this.star = this.physics.add.image(400, 50, 'star');
-    this.star1 = this.physics.add.image(400, 150, 'star');
-    this.star2 = this.physics.add.image(400, 250, 'star');
-    this.star3 = this.physics.add.image(400, 350, 'star');
-    this.star4 = this.physics.add.image(400, 450, 'star');
-    this.star5 = this.physics.add.image(400, 550, 'star');
+    this.star = this.physics.add.image(400, 50, 'star').setScale(.8);
+    this.star1 = this.physics.add.image(400, 150, 'star').setScale(.8);
+    this.star2 = this.physics.add.image(400, 250, 'star').setScale(.8);
+    this.star3 = this.physics.add.image(400, 350, 'star').setScale(.8);
+    this.star4 = this.physics.add.image(400, 450, 'star').setScale(.8);
+    this.star5 = this.physics.add.image(400, 550, 'star').setScale(.8);
     //Add's a playable character to the game canvas with physics
     this.man = this.physics.add.sprite(700, 300, 'man', [2]).setScale(1.5);
     //Allows keyboard input to control the character
@@ -45,16 +46,16 @@ class play extends Phaser.Scene {
     this.background.tilePositionX += 0.5;
     //Add's controls to the playable character
     if (this.cursor.left.isDown) {
-      this.man.x -= 2;
+      this.man.x -= 3;
       this.man.anims.play('left', true);
     } else if (this.cursor.right.isDown) {
-      this.man.x += 2;
+      this.man.x += 3;
       this.man.anims.play('right', true);
     } else if (this.cursor.up.isDown) {
-      this.man.y -= 2;
+      this.man.y -= 3;
       this.man.anims.play('up', true);
     } else if (this.cursor.down.isDown) {
-      this.man.y += 2;
+      this.man.y += 3;
       this.man.anims.play('down', true);
     }
   }
