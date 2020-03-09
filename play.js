@@ -4,28 +4,58 @@ class play extends Phaser.Scene {
   }
 
   create() {
-    //Add's the background image to the game canvas 
-    this.background = this.add.tileSprite(400, 300, config.width, config.height, 'background').setScale(2);
-    this.background.alpha = .4;
+    //Add's the background image to the game canvas
+    this.background = this.add
+      .tileSprite(400, 300, config.width, config.height, 'background')
+      .setScale(2);
+    this.background.alpha = 0.4;
     //Add's the planets to the game canvas with physics
     this.planet = this.physics.add.image(400, 100, 'planet').setScale(0.9);
     this.planet1 = this.physics.add.image(400, 200, 'planet1').setScale(1.2);
     this.planet2 = this.physics.add.image(400, 300, 'planet2').setScale(0.7);
     this.planet3 = this.physics.add.image(400, 400, 'planet3').setScale(0.5);
     this.planet4 = this.physics.add.image(400, 500, 'planet4').setScale(1.5);
+
+    this.enemy = this.physics.add.group();
+    this.enemy.add(this.planet);
+    this.enemy.add(this.planet1);
+    this.enemy.add(this.planet2);
+    this.enemy.add(this.planet3);
+    this.enemy.add(this.planet4);
     //Add's the stars to the game canvas with physics
-    this.star = this.physics.add.image(400, 50, 'star').setScale(.8);
-    this.star1 = this.physics.add.image(400, 150, 'star').setScale(.8);
-    this.star2 = this.physics.add.image(400, 250, 'star').setScale(.8);
-    this.star3 = this.physics.add.image(400, 350, 'star').setScale(.8);
-    this.star4 = this.physics.add.image(400, 450, 'star').setScale(.8);
-    this.star5 = this.physics.add.image(400, 550, 'star').setScale(.8);
+    this.star = this.physics.add.image(400, 50, 'star').setScale(0.8);
+    this.star1 = this.physics.add.image(400, 150, 'star').setScale(0.8);
+    this.star2 = this.physics.add.image(400, 250, 'star').setScale(0.8);
+    this.star3 = this.physics.add.image(400, 350, 'star').setScale(0.8);
+    this.star4 = this.physics.add.image(400, 450, 'star').setScale(0.8);
+    this.star5 = this.physics.add.image(400, 550, 'star').setScale(0.8);
+
+    this.collect = this.physics.add.group();
+    this.collect.add(this.star);
+    this.collect.add(this.star1);
+    this.collect.add(this.star2);
+    this.collect.add(this.star3);
+    this.collect.add(this.star4);
+    this.collect.add(this.star5);
+
     //Add's a playable character to the game canvas with physics
     this.man = this.physics.add.sprite(700, 300, 'man', [2]).setScale(1.5);
+
     //Allows keyboard input to control the character
     this.cursor = this.input.keyboard.createCursorKeys();
+
     //Makes the playable character clash with the world boundaries so they dont just fly out of picture
     this.man.setCollideWorldBounds(true);
+
+    this.physics.add.overlap(
+      this.man,
+      this.collect,
+      this.collectStar,
+      null,
+      this
+    );
+
+    this.physics.add.overlap(this.man, this.enemy, this.killPlayer, null, this);
   }
 
   update() {
@@ -84,5 +114,15 @@ class play extends Phaser.Scene {
     star.x = 0;
     var randomY = Phaser.Math.Between(0, config.height);
     star.y = randomY;
+  }
+
+  collectStar(man, collect) {
+    collect.disableBody(true, true);
+  }
+
+  killPlayer(man, enemy) {
+    this.resetPlanetPos(enemy);
+    man.x = 700;
+    man.y = 300;
   }
 }

@@ -5,11 +5,11 @@ var config = {
   scene: [load, play],
   pixelArt: true,
   physics: {
-      default: 'arcade',
-      arcade: {
-          gravity: { y: 0},
-          debug: true
-      }
+    default: 'arcade',
+    arcade: {
+      gravity: {y: 0},
+      debug: true
+    }
   }
 };
 
