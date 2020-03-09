@@ -20,30 +20,30 @@ class load extends Phaser.Scene {
   }
 
   create() {
-    //starts play.js 
+    //starts play.js
     this.scene.start('startGame');
     //adds animations to the playable character
     this.anims.create({
       key: 'left',
-      frames: [ { key: 'man', frame: 0}],
+      frames: [{ key: 'man', frame: 0 }],
       frameRate: 10,
       repeat: 0
     });
     this.anims.create({
       key: 'right',
-      frames: [ { key: 'man', frame: 4}],
+      frames: [{ key: 'man', frame: 4 }],
       frameRate: 10,
       repeat: 0
     });
     this.anims.create({
       key: 'up',
-      frames: [ { key: 'man', frame: 2}],
+      frames: [{ key: 'man', frame: 2 }],
       frameRate: 10,
       repeat: 0
     });
     this.anims.create({
       key: 'down',
-      frames: [ { key: 'man', frame: 2}],
+      frames: [{ key: 'man', frame: 2 }],
       frameRate: 10,
       repeat: 0
     });
