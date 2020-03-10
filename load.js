@@ -12,6 +12,7 @@ class load extends Phaser.Scene {
     this.load.image('planet3', 'assets/images/Ocean.png');
     this.load.image('planet4', 'assets/images/Terran.png');
     this.load.image('star', 'assets/images/star.png');
+
     //Loads the spritesheets in the game canvas
     this.load.spritesheet('man', 'assets/spritesheets/man.png', {
       frameWidth: 16,
@@ -22,6 +23,7 @@ class load extends Phaser.Scene {
   create() {
     //starts play.js
     this.scene.start('startGame');
+
     //adds animations to the playable character
     this.anims.create({
       key: 'left',

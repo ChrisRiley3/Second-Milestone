@@ -6,22 +6,26 @@ class play extends Phaser.Scene {
   create() {
     //Adds a Points counter at the top of the game
     this.points = 0;
-    this.pointsLabel = this.add.text(350, 20, 'Points: 0', {fontSize: '20px', fill:'#fff'});
+    this.pointsLabel = this.add.text(20, 10, 'Points: 0', {fontSize: '26px', fill: '#fff'});
+
+    this.highScore = 0;
+    this.highScoreLabel = this.add.text(550, 10, 'High Score: 0', {fontSize: '26px', fill: '#fff'});
 
     //Add's the background image to the game canvas
-    this.background = this.add
-      .tileSprite(400, 300, config.width, config.height, 'background')
-      .setScale(2);
+    this.background = this.add.tileSprite(400, 300, config.width, config.height, 'background').setScale(2);
 
     //Created a darker background to add effect to the game
     this.background.alpha = 0.4;
 
     //Add's the planets to the game canvas with physics
-    this.planet = this.physics.add.image(400, 100, 'planet').setScale(0.9);
-    this.planet1 = this.physics.add.image(400, 200, 'planet1').setScale(1.2);
-    this.planet2 = this.physics.add.image(400, 300, 'planet2').setScale(0.7);
-    this.planet3 = this.physics.add.image(400, 400, 'planet3').setScale(0.5);
-    this.planet4 = this.physics.add.image(400, 500, 'planet4').setScale(1.5);
+    this.planet = this.physics.add.image(0, 100, 'planet').setScale(0.9);
+    this.planet1 = this.physics.add.image(0, 200, 'planet1').setScale(1.2);
+    this.planet2 = this.physics.add.image(0, 300, 'planet2').setScale(0.7);
+    this.planet3 = this.physics.add.image(0, 400, 'planet3').setScale(0.5);
+    this.planet4 = this.physics.add.image(0, 500, 'planet4').setScale(1.5);
+    this.planet5 = this.physics.add.image(0, 150, 'planet').setScale(1.2);
+    this.planet6 = this.physics.add.image(0, 250, 'planet1').setScale(1.6);
+    this.planet7 = this.physics.add.image(0, 350, 'planet2').setScale(1.5);
 
     //Puts all the planets in a group to allow collision between the player and the planets
     this.enemy = this.physics.add.group();
@@ -30,14 +34,17 @@ class play extends Phaser.Scene {
     this.enemy.add(this.planet2);
     this.enemy.add(this.planet3);
     this.enemy.add(this.planet4);
+    this.enemy.add(this.planet5);
+    this.enemy.add(this.planet6);
+    this.enemy.add(this.planet7);
 
     //Add's the stars to the game canvas with physics
-    this.star = this.physics.add.image(400, 50, 'star').setScale(0.8);
-    this.star1 = this.physics.add.image(400, 150, 'star').setScale(0.8);
-    this.star2 = this.physics.add.image(400, 250, 'star').setScale(0.8);
-    this.star3 = this.physics.add.image(400, 350, 'star').setScale(0.8);
-    this.star4 = this.physics.add.image(400, 450, 'star').setScale(0.8);
-    this.star5 = this.physics.add.image(400, 550, 'star').setScale(0.8);
+    this.star = this.physics.add.image(0, 50, 'star').setScale(0.8);
+    this.star1 = this.physics.add.image(0, 150, 'star').setScale(0.8);
+    this.star2 = this.physics.add.image(0, 250, 'star').setScale(0.8);
+    this.star3 = this.physics.add.image(0, 350, 'star').setScale(0.8);
+    this.star4 = this.physics.add.image(0, 450, 'star').setScale(0.8);
+    this.star5 = this.physics.add.image(0, 550, 'star').setScale(0.8);
 
     //Puts all the stars in a group to allow the player to collect the stars wheen they collide
     this.collect = this.physics.add.group();
@@ -69,6 +76,9 @@ class play extends Phaser.Scene {
     this.movePlanet(this.planet2, 1.3);
     this.movePlanet(this.planet3, 1.7);
     this.movePlanet(this.planet4, 1.5);
+    this.movePlanet(this.planet5, 1.4);
+    this.movePlanet(this.planet6, 1.8);
+    this.movePlanet(this.planet7, 1.6);
 
     //Moves the stars across the game canvas
     this.moveStar(this.star, 1.5);
@@ -94,6 +104,12 @@ class play extends Phaser.Scene {
     } else if (this.cursor.down.isDown) {
       this.man.y += 3;
       this.man.anims.play('down', true);
+    }
+
+    this.highScoreLabel.text = 'High Score: ' + localStorage.getItem('PlanetManhighscore'); {
+      if (this.points > localStorage.getItem('PlanetManhighscore')) {
+        localStorage.setItem('PlanetManhighscore', this.points);
+      }
     }
   }
 
@@ -130,15 +146,15 @@ class play extends Phaser.Scene {
   //Allows the player to interact with the stars in the game so they dissappear when they overlap
   //Modified so points will be added with every star collected
   collectStar(man, collect) {
-    collect.disableBody(true, true);
+    this.resetStarPos(collect)
     this.points += 5;
     this.pointsLabel.text = 'Points: ' + this.points;
+    this.highScore += 5;
+    this.highScoreLabel.text = 'High Score: ' + this.highScore;
   }
 
   //Allows the planets to interact the player so that they kill the player when they overlap
   killPlayer(man, enemy) {
-    this.resetPlanetPos(enemy);
-    man.x = 700;
-    man.y = 300;
+    this.scene.start('loadGame')
   }
 }
