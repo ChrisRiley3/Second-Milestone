@@ -3,7 +3,7 @@ body {
 }
 
 canvas {
-    display: flex;
+    display: block;
     margin: auto;
 }
 

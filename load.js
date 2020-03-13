@@ -20,8 +20,6 @@ class load extends Phaser.Scene {
     });
   }
 
-  
-
   create() {
     //starts play.js
     this.scene.start('startGame');
