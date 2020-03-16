@@ -59,6 +59,9 @@ body {
 
 .section-list {
     color: #ffff00;
+    letter-spacing: 2px;
+    font-size: 14px;
+    line-height: 30px;
 }
 
 /*--------------------------------------------------- Comments Page*/

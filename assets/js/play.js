@@ -8,6 +8,7 @@ class play extends Phaser.Scene {
     this.points = 0;
     this.pointsLabel = this.add.text(20, 10, 'Points: 0', {fontSize: '26px', fill: '#fff'});
 
+    //Adds a High Score to the top right of the game
     this.highScore = 0;
     this.highScoreLabel = this.add.text(550, 10, 'High Score: 0', {fontSize: '26px', fill: '#fff'});
 
@@ -93,19 +94,20 @@ class play extends Phaser.Scene {
 
     //Add's controls to the playable character
     if (this.cursor.left.isDown) {
-      this.man.x -= 3;
+      this.man.x -= 1.5;
       this.man.anims.play('left', true);
     } else if (this.cursor.right.isDown) {
-      this.man.x += 3;
+      this.man.x += 1.5;
       this.man.anims.play('right', true);
     } else if (this.cursor.up.isDown) {
-      this.man.y -= 3;
+      this.man.y -= 1.5;
       this.man.anims.play('up', true);
     } else if (this.cursor.down.isDown) {
-      this.man.y += 3;
+      this.man.y += 1.5;
       this.man.anims.play('down', true);
     }
 
+    //Stores the high score in local storage so users can work to beating it
     this.highScoreLabel.text = 'High Score: ' + localStorage.getItem('PlanetManhighscore'); {
       if (this.points > localStorage.getItem('PlanetManhighscore')) {
         localStorage.setItem('PlanetManhighscore', this.points);
