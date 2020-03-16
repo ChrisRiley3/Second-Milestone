@@ -6,9 +6,9 @@ canvas {
 
 body {
     background-color: #000;
+    width: 100%;
+    height: 100%;
 }
-
-
 
 /*--------------------------------------------------- Home Page*/
 .navbar {
@@ -60,3 +60,39 @@ body {
 .section-list {
     color: #ffff00;
 }
+
+/*--------------------------------------------------- Comments Page*/
+
+.form {
+    padding: 10px;
+    border: 1px solid #ffff00;
+    color: #ffff00;
+    text-align: center;
+    margin: 10px;
+}
+
+.name,
+.date, 
+.form textarea {
+    border: 1px solid #ffff00;
+    padding: 2px;
+    width: 300px;
+    margin: 5px;
+    background-color: #000;
+    color: #ffff00;
+}
+.comment-box {
+    width: 90%;
+    border: 1px solid #ffff00;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 10px auto 10px;
+    text-align: center;
+}
+
+.comment-panel {
+    width: 80%;
+    color: #ffff00;
+    margin-bottom: 10px;
+}
+
