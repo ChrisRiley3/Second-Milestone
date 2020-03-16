@@ -21,3 +21,19 @@ This project uses skills that i have learned so far working through the course a
 * The users visiting the website want to be abele to leave comments on the game. Mybe add some features they would want to see or leave a review for the developer. This section has its very one page called comments. This can be found at the top on the navigation bar. When clicked it will take the user to the comments page where they will be able to leave their name and comment and when it is submitted the comment will be displayed on the page. 
 
 To view my UXD you can navigate over to my UXD directory. There you can view my Scope Plane, Strategy Plane, Structure Plane and Skeleton Plane. [https://github.com/ChrisRiley3/Second-Milestone/tree/master/user-design-experience].
+
+# Features
+
+* Navigation Feature: This allows the users visiting to the website to navigate around it freely. The navbar is at the top of every page so no matter where the user is on the website they can navigate from page to page. The Navbar is also fully responsive so as the user alters the size of their window the navbar will adjust. 
+
+* Game Feature: This is the main reason the users will be visiting the website. The game itself has many features such as moving objects, physics, playable characters, moving spritesheets, enemies, things to collect, a control system, a scoring system, a high score system where your score is saved on your local storage so you can always try and beat your high score. The game is also continuously running so you dont have to worry about long loading screens.
+
+* Comments Page: The comments page allows for interaction between the developer and the users, this is probably the most important page of all because it gives the users a chance to leave reviews on what they liked and disliked it also gives them a chance to tell the developer what they would like to see in future releases, the users can see these up and coming features in the patch notes on the home page.
+
+### Future Features
+
+* A store: As the game starts to become more and more popular a store page will be added so all them hard core fans can finally give something back to the developer and show their support, but not everything will come at a price. there will also be rewards given out to the loyal fans and the store page will be where they can come to collect their rewards. 
+
+* A leader board: The leaderboard will be the next big thing that will come to planet man, as the developer i know how much it means to other users to be able to compete against eachother so this feature wont be far off.
+
+* Game Features: Eventually they will be loads more features added to the game itself such as different playable characters, power ups to collect, different maps, audio, multiplayer, the list goes on and the oppertunities are endless but the main thing to keep in mind is not to bring all these features out at once, by bringing them out one by one over time it will keep the game interesting for a longer period of time. 
