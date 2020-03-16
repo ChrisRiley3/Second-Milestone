@@ -1,7 +1,14 @@
 /*--------------------------------------------------- Universal*/
+canvas {
+    display: block;
+    margin: auto;
+}
+
 body {
     background-color: #000;
 }
+
+
 
 /*--------------------------------------------------- Home Page*/
 .navbar {
@@ -40,4 +47,16 @@ body {
 .section-heading {
     color: #ffff00;
     text-align: center;
+}
+
+.section-paragraph {
+    color: #ffff00;
+    margin: 5px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.section-list {
+    color: #ffff00;
 }
