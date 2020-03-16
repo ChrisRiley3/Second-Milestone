@@ -3,31 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Planet Man</title>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.js"></script>
-    <script type="text/javascript" src="load.js"></script>
-    <script type="text/javascript" src="play.js"></script>
-    <script type="text/javascript" src="game.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-      <div class="heading">
-        <h1 class="heading-text">
-          Planet Man
-        </h1>
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-color">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link nav-text" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text" href="game.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text" href="#">Comments</a>
+          </li>
+        </ul>
       </div>
-      <div class="section">
-        <h3 class="section-head">How To Play:</h3>
-        <ol class="list">
-          <li>Use the arrow keys to move your player</li>
-          <li>Collect the stars</li>
-          <li>Avoid coming into contact with the planets</li>
-          <li>Create high scores to show off to yours friends</li>
-        </ol>
-      </div>
+    </nav>
+
+    <!--Main Section-->
+    <h1 class="main-heading">
+        Planet Man
+    </h1>
+    <div class="container-fluid">
+    <div class="section">
+        <h2 class="section-heading">
+            About Me..
+        </h2>
+        <p class="section-paragraph"></p>
+    </div>
+    <div class="section">
+        <h2 class="section-heading">
+            About the Game..
+        </h2>
+        <p class="section-paragraph"></p>
+    </div>
+    <div class="section">
+        <h2 class="section-heading">
+            How to Play..
+        </h2>
+        <p class="section-paragraph"></p>
+    </div>
+    <div class="section">
+        <h2 class="section-heading">
+            Patch Notes..
+        </h2>
+        <p class="section-paragraph"></p>
+    </div>
+</div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>

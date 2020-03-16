@@ -1,0 +1,43 @@
+/*--------------------------------------------------- Universal*/
+body {
+    background-color: #000;
+}
+
+/*--------------------------------------------------- Home Page*/
+.navbar {
+    margin-bottom: 50px;
+}
+
+.bg-color {
+    background-color: #000!important;
+}
+
+.nav-text {
+    color: #ffff00!important;
+}
+
+.main-heading {
+    display: block;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    color: #ffff00;
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 5px;
+}
+
+.section {
+    display: inline-block;
+    margin: 0 auto 50px;
+    border: 1px solid #ffff00;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+    font-family: 'Space Mono', monospace;
+}
+
+.section-heading {
+    color: #ffff00;
+    text-align: center;
+}
