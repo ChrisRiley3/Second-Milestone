@@ -108,6 +108,7 @@ class play extends Phaser.Scene {
     }
 
     //Stores the high score in local storage so users can work to beating it
+    //This bit of code was took from https://www.youtube.com/watch?v=FtzxZF_Gjjg
     this.highScoreLabel.text = 'High Score: ' + localStorage.getItem('PlanetManhighscore'); {
       if (this.points > localStorage.getItem('PlanetManhighscore')) {
         localStorage.setItem('PlanetManhighscore', this.points);
