@@ -12,7 +12,7 @@ body {
 
 /*--------------------------------------------------- Home Page*/
 .navbar {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 .bg-color {
@@ -74,14 +74,14 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-.name,
-.date, 
+.name, 
+.date,
 .form textarea {
     border: 1px solid #ffff00;
     border-radius: 5px;
-    padding: 2px;
+    padding: 5px;
     width: 300px;
-    margin: 5px;
+    margin: 5px auto;
     background-color: #000;
     color: #ffff00;
 }
@@ -99,15 +99,16 @@ body {
 
 .comment-box {
     width: 90%;
+    border: 1px solid #ffff00;
     border-radius: 5px;
     padding: 1%;
     margin: 10px auto 10px;
     text-align: center;
+    
 }
 
 .comment-panel {
-    width: 80%;
     color: #ffff00;
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
-
