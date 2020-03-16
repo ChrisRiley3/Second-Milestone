@@ -34,10 +34,10 @@ To view my UXD you can navigate over to my UXD directory. There you can view my 
 
 * A store: As the game starts to become more and more popular a store page will be added so all them hard core fans can finally give something back to the developer and show their support, but not everything will come at a price. there will also be rewards given out to the loyal fans and the store page will be where they can come to collect their rewards. 
 
-* A leader board: The leaderboard will be the next big thing that will come to planet man, as the developer i know how much it means to other users to be able to compete against eachother so this feature won’t be far off.
+* A leader board: The leaderboard will be the next big thing that will come to planet man, as the developer i know how much it means to other users to be able to compete against eachother, so this feature won’t be far off.
 
 * Game Features: Eventually they will be loads more features added to the game itself such as different playable characters, power ups to collect, different maps, audio, multiplayer, the list goes on and the oppertunities are endless but the main thing to keep in mind is not to bring all these features out at once, by bringing them out one by one over time it will keep the game interesting for a longer period of time. 
-
+ 
 # Technologies used 
 
 * HTML5
