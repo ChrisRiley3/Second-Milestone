@@ -65,25 +65,37 @@ body {
 
 .form {
     padding: 10px;
-    border: 1px solid #ffff00;
     color: #ffff00;
     text-align: center;
     margin: 10px;
+    font-family: 'Space Mono', monospace;
 }
 
 .name,
 .date, 
 .form textarea {
     border: 1px solid #ffff00;
+    border-radius: 5px;
     padding: 2px;
     width: 300px;
     margin: 5px;
     background-color: #000;
     color: #ffff00;
 }
+
+.my-button {
+    background-color: #000;
+    color: #ffff00;
+    border: 1px solid #ffff00;
+    border-radius: 5px;
+}
+
+.my-button:hover {
+    transform: scale(1.2);
+}
+
 .comment-box {
     width: 90%;
-    border: 1px solid #ffff00;
     border-radius: 5px;
     padding: 1%;
     margin: 10px auto 10px;
