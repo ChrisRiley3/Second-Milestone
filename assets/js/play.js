@@ -148,7 +148,7 @@ class play extends Phaser.Scene {
   //Allows the player to interact with the stars in the game so they dissappear when they overlap
   //Modified so points will be added with every star collected
   collectStar(man, collect) {
-    this.resetStarPos(collect)
+    this.resetStarPos(collect);
     this.points += 5;
     this.pointsLabel.text = 'Points: ' + this.points;
     this.highScore += 5;
@@ -157,6 +157,6 @@ class play extends Phaser.Scene {
 
   //Allows the planets to interact the player so that they kill the player when they overlap
   killPlayer(man, enemy) {
-    this.scene.start('loadGame')
+    this.scene.start('loadGame');
   }
 }

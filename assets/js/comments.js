@@ -6,7 +6,7 @@ function render(data) {
 
 $(document).ready(function() {
 
-    var comment = []
+    var comment = [];
 
     if(!localStorage.commentData) {
         localStorage.commentData = [];
@@ -23,12 +23,12 @@ $(document).ready(function() {
         'name': $('#name').val(),
         'date': $('#date').val(),
         'body': $('#bodyText').val()
-    }
+    };
     comment.push(addObj);
     localStorage.commentData = JSON.stringify(comment);
     render(addObj);
     $('#name').val('');
     $('#date').val('dd/mm/yyyy');
-    $('#bodyText').val('')
+    $('#bodyText').val('');
   });
 });
