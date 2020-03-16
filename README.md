@@ -37,3 +37,19 @@ To view my UXD you can navigate over to my UXD directory. There you can view my 
 * A leader board: The leaderboard will be the next big thing that will come to planet man, as the developer i know how much it means to other users to be able to compete against eachother so this feature wont be far off.
 
 * Game Features: Eventually they will be loads more features added to the game itself such as different playable characters, power ups to collect, different maps, audio, multiplayer, the list goes on and the oppertunities are endless but the main thing to keep in mind is not to bring all these features out at once, by bringing them out one by one over time it will keep the game interesting for a longer period of time. 
+
+# Technologies used 
+
+* HTML5
+* CSS3
+* Bootstrap4
+* GIT
+* Github
+* Google Chrome Developer tools 
+* Visual Studio Code
+* Google Fonts
+* Javascript 
+* Jquery 
+* JSON
+* Phaser.io framework
+* Local Storage
