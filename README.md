@@ -2,7 +2,7 @@
 
 Hello and welcome to my Second milestone project. this project will help to get a first-time game developers’ game out there for users to experience and supply feedback. When visiting the website, the users will be hit with information about the developer and what his goals are in the future. The user will be able to find information about the game on the home page and what its end goals are.
 
-The game itself is a very simple but addicting game. The games path is simple, so it attracts people of all ages. there is no over complicated story to follow the game is designed so that a user can come along visit the website and start playing straight away without having to remember where they left off and just pass the time. The goal is simply get a high score and eventually the users will be able to play against each others high scores when a leader board is added to the game.
+The game itself is a very simple but addicting game. The games path is simple, so it attracts people of all ages. there is no over complicated story to follow the game is designed so that a user can come along visit the website and start playing straight away without having to remember where they left off and just pass the time. The goal is simple, get a high score and eventually the users will be able to play against each other’s high scores when a leader board is added to the game.
 
 # UX
 
@@ -66,6 +66,29 @@ When making the comments page I needed abit of help to get the code correct i ha
 
 # Deployment
 
-To create this webpage i used Visual Studio Code and downloaded python to be able to run a local web server for my game, I then created a local git directory for version control, i then initilised a new git repository but opening my terminal and entering the commant "git init". Then using github i created a new repository called Second-Milestone [https://github.com/ChrisRiley3/Second-Milestone]. I was then all set up to start pushing completed code to my github repository. as i worked though the project I made plenty of commits and named them accordingly so if I ever needed to go back a few steps I could do so easily. Once I was happy with the webpage i could then make the site live by using github pages. The finished site can be found at [https://chrisriley3.github.io/Second-Milestone/]. However if this does not work for you copy the code in my github repositories and put the files in a new folder. Using python open your terminal and enter "python -m http.server", this should start a new local server for you. Open your browser and type in the server found in the terminal or enter "localhost:8000" or "127.0.0.1:8000" this will load the website and you will be able to access the game. 
+To create this webpage i used Visual Studio Code and downloaded python to be able to run a local web server for my game, I then created a local git directory for version control, i then initilised a new git repository but opening my terminal and entering the commant "git init". Then using github i created a new repository called Second-Milestone [https://github.com/ChrisRiley3/Second-Milestone]. I was then all set up to start pushing completed code to my github repository. as i worked though the project I made plenty of commits and named them accordingly so if I ever needed to go back a few steps I could do so easily. Once I was happy with the webpage i could then make the site live by using github pages. The finished site can be found at [https://chrisriley3.github.io/Second-Milestone/]. However, if this does not work for you copy the code in my github repositories and put the files in a new folder. Using python open your terminal and enter "python -m http.server", this should start a new local server for you. Open your browser and type in the server found in the terminal or enter "localhost:8000" or "127.0.0.1:8000" this will load the website and you will be able to access the game. 
+
+# Credits
+
+### Content 
+
+The code used for the navigation bar was obtained from [https://getbootstrap.com/docs/4.4/components/navbar/]
+
+I used the framework from phaser.io to help create the full game there are many tutorials on there but the main one i used to help me was from this link [http://phaser.io/tutorials/making-your-first-phaser-3-game/part1].
+
+Many YouTube videos helped me along the process 
+* [https://www.youtube.com/watch?v=T9kOFSFvgKc&t=730s]
+* [https://www.youtube.com/watch?v=JeTY0wfVtXg&t=1s]
+* [https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLCw7wwjGEim4xTHUNLqp2JDgqio4Rh78l]
+* [https://www.youtube.com/watch?v=S1VSKkL_ePM&t=263s]
+
+### Media 
+
+All the photos that were used when creating this webpage were took from [https://itch.io/game-assets/free/tag-pixel-art]
+
+### Acknowledgements
+
+The inspiration for this project came from a lifelong obsession with games, watching them daily on youtube i am facsinate. This is an industry that i am very interested in and hopefully one day i would like to eventually work as part of a team to create bigger and better games. 
+
 
 
